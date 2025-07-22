@@ -2,12 +2,12 @@
 
 ### Complete
 
-<img src="./assets/images_readmi/pic1.png" width="200"/>
+<img src="./assets/images_readme/pic1.png" width="200"/>
 
 ## Installation
 - Move to project branch
 ```bash
-    git checkout feature_practice1
+    git checkout feature/layout_text_assets
 ```
 - Run project
 ```bash
