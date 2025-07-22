@@ -1,15 +1,1 @@
-# flutter_demo_layout_text_assets & images
-
-### Complete
-
-<img src="./assets/images_readmi/pic1.png" width="200"/>
-
-## Installation
-- Move to project branch
-```bash
-    git checkout feature_practice1
-```
-- Run project
-```bash
-  flutter run
-```
+# flutter_Training
