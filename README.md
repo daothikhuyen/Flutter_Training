@@ -1,7 +1,7 @@
 # flutter_demo_layout_text_assets & images
 
 ## Completed:
-# Content:
+### Content:
 - As an example with layout: Container, GridView, Card, Stack, Row, Colum,...
 - Text: Style, Font size, Font style (gg font,..)
 - assets & images : Specifying assets with images, loading images
