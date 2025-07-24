@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/screem/action_shortcuts.dart';
-import 'package:flutter_practice/screem/draggable_card.dart';
-import 'package:flutter_practice/screem/gestures.dart';
-import 'package:flutter_practice/screem/interactivity.dart';
-
+import 'package:flutter_practice/screem/autocomplete.dart';
+import 'package:flutter_practice/screem/form_data.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -21,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // textTheme: GoogleFonts.grandHotelTextTheme(),
       ),
-      home: ActionShortcuts()
+      home: FormData()
     );
   }
 }

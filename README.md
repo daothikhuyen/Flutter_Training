@@ -1,34 +1,19 @@
 # flutter_demo_Interactivity
 
-## Interactivity: Interactive 
+## Interactivity: Form 
 
-- ***StatelessWidget & StatefulWidget, Point and Gestures, Animate a widget using a physics simulation***
-- commit: [c746310](https://github.com/daothikhuyen/Flutter_Training/commit/c7463101c335b7f9ee66ed432fd1635393efb369)
+- ***Content: Input, Built a form with validation, focus and text fields***
+  
+#### Example 
 
-### Shortcuts and Actions
+- Autocomplete
 
-- ***shortcuts , action, itent***
-- Shortcuts : Ctrl + A, Ctrl + S, entern,...
-- Action : SelectionAllIntent, ActivateIntent, ....
-- Log : log of all called actions,...
+<img src="./assets/images_readme/pic9.png" width="200"/>  
 
-<img src="./assets/images_readme/pic7.png" width="200"/>
+- Validation and foucs
 
-### StatelessWidget & StatefulWidget
+<img src="./assets/images_readme/pic8.png" width="200"/>  
 
-- ***setState() { icon favorite}***
-
-<img src="./assets/images_readme/pic3.png" width="200"/>    <img src="./assets/images_readme/Screenshot_1753237974.png" width="200"/>
-
-### Gestures: Tap, Swipe, Drag
-- Point and Gestures
-
-<img src="./assets/images_readme/pic2.png" width="200"/>  <img src="./assets/images_readme/pic6.png" width="200"/>
-
-### Animate a widget using a physics simulation
-- Expand with mixin to control animation. Change coordinates
-
-<img src="./assets/images_readme/pic4.png" width="200"/> <img src="./assets/images_readme/pic5.png" width="200"/>
 
 ## TECHNOLOGIES USED
 - Visual studio code
@@ -39,7 +24,7 @@
 ## Installation
 - Move to project branch
 ```bash
-    git checkout feature/Interactivity_interactive
+    git checkout feature/Interactivity_form
 ```
 - Run project
 ```bash
