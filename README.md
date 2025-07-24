@@ -2,6 +2,18 @@
 
 ## Interactivity: Interactive 
 
+- ***StatelessWidget & StatefulWidget, Point and Gestures, Animate a widget using a physics simulation***
+- commit: [c746310](https://github.com/daothikhuyen/Flutter_Training/commit/c7463101c335b7f9ee66ed432fd1635393efb369)
+
+### Shortcuts and Actions
+
+- ***shortcuts , action, itent***
+- Shortcuts : Ctrl + A, Ctrl + S, entern,...
+- Action : SelectionAllIntent, ActivateIntent, ....
+- Log : log of all called actions,...
+
+<img src="./assets/images_readme/pic7.png" width="200"/>
+
 ### StatelessWidget & StatefulWidget
 
 - ***setState() { icon favorite}***
