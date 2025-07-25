@@ -1,0 +1,14 @@
+{
+  "@@locale": "vi",
+  "title": "Form Nhập Liệu",
+  "enter_email": "Nhập email",
+  "enter_name": "Nhập tên",
+  "gender" : "Giới tính",
+  "male" : "Nữ",
+  "female" : "Nam",
+  "other": "Khác",
+  "checkbox_agree": "Tôi đồng ý với các chính sách bên bạn",
+  "submit" : "Đăng Nhập",
+  "english": "Tiếng Anh",
+  "vietnam": "Việt Nam"
+}

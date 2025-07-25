@@ -2,9 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FormData extends StatefulWidget {
-  const FormData({super.key});
+  final void Function(Locale) onChangeLanguage;
+  final Locale currentLocale;
+
+  const FormData({
+    super.key,
+    required this.onChangeLanguage,
+    required this.currentLocale,
+  });
 
   @override
   State<FormData> createState() => _FormDataState();
@@ -15,6 +23,7 @@ class _FormDataState extends State<FormData> {
   final FocusNode _focusNode = FocusNode();
   final TextEditingController _emailInput = TextEditingController();
   final TextEditingController _nameInput = TextEditingController();
+  String? selectedLanguage;
   // ignore: unused_field
   String _eventText = "";
   bool state = false;
@@ -28,6 +37,25 @@ class _FormDataState extends State<FormData> {
     });
   }
 
+  void _handleLanguageChange(bool? value) {
+    setState(() {
+      if (selectedLanguage == 'vi') {
+        widget.onChangeLanguage(const Locale('en'));
+        selectedLanguage = 'en';
+      } else {
+        widget.onChangeLanguage(const Locale('vi'));
+        selectedLanguage = 'vi';
+      }
+      
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    selectedLanguage = widget.currentLocale.languageCode;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +67,7 @@ class _FormDataState extends State<FormData> {
           child: Padding(
             padding: const EdgeInsets.only(top: 8),
             child: Text(
-              'Form Input',
+              AppLocalizations.of(context).title,
               style: GoogleFonts.grandHotel().copyWith(
                 fontSize: 40,
                 fontWeight: FontWeight.w600,
@@ -65,11 +93,30 @@ class _FormDataState extends State<FormData> {
             padding: const EdgeInsets.all(30.0),
             child: Column(
               children: <Widget>[
+                Row(
+                  children: [
+                    Checkbox(
+                      value: selectedLanguage == 'vi' ? true : false,
+                      onChanged: (value) {
+                        _handleLanguageChange(value);
+                      },
+                    ),
+                    Text(AppLocalizations.of(context).vietnam),
+                    SizedBox(width: 20),
+                    Checkbox(
+                      value: selectedLanguage == 'en' ? true : false,
+                      onChanged: (value) {
+                        _handleLanguageChange(value);
+                      },
+                    ),
+                    Text(AppLocalizations.of(context).english),
+                  ],
+                ),
                 TextFormField(
                   autofocus: true,
                   controller: _emailInput,
                   decoration: InputDecoration(
-                    hintText: 'Enter email',
+                    hintText: AppLocalizations.of(context).enter_email,
                     border: OutlineInputBorder(),
                   ),
                   validator: (String? value) {
@@ -83,7 +130,7 @@ class _FormDataState extends State<FormData> {
                 TextFormField(
                   controller: _nameInput,
                   decoration: InputDecoration(
-                    hintText: 'Enter name',
+                    hintText: AppLocalizations.of(context).enter_name,
                     border: OutlineInputBorder(),
                   ),
                   validator: (String? value) {
@@ -107,43 +154,43 @@ class _FormDataState extends State<FormData> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Gender: ',
+                                AppLocalizations.of(context).gender + ": ",
                                 style: TextStyle(fontWeight: FontWeight.w600),
                               ),
                               Row(
                                 children: [
                                   Radio<String>(
-                                    value: 'male',
+                                    value: AppLocalizations.of(context).male,
                                     groupValue: field.value,
                                     onChanged: (val) {
                                       field.didChange(val);
                                     },
                                   ),
-                                  Text('Male'),
+                                  Text(AppLocalizations.of(context).male),
                                 ],
                               ),
                               Row(
                                 children: [
                                   Radio<String>(
-                                    value: 'female',
+                                    value: AppLocalizations.of(context).female,
                                     groupValue: field.value,
                                     onChanged: (val) {
                                       field.didChange(val);
                                     },
                                   ),
-                                  Text('female'),
+                                  Text(AppLocalizations.of(context).female),
                                 ],
                               ),
                               Row(
                                 children: [
                                   Radio<String>(
-                                    value: 'other',
+                                    value: AppLocalizations.of(context).other,
                                     groupValue: field.value,
                                     onChanged: (val) {
                                       field.didChange(val);
                                     },
                                   ),
-                                  Text('Other'),
+                                  Text(AppLocalizations.of(context).other),
                                 ],
                               ),
                             ],
@@ -174,7 +221,7 @@ class _FormDataState extends State<FormData> {
                                 field.didChange(val); // cập nhật giá trị nội bộ
                               },
                             ),
-                            Text('I agree to your privacy policy'),
+                            Text(AppLocalizations.of(context).checkbox_agree),
                           ],
                         ),
                         if (field.hasError)
@@ -195,8 +242,7 @@ class _FormDataState extends State<FormData> {
                     child: GestureDetector(
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
-                         context.go('/ShopMeo');
-                          
+                          _updateText(_emailInput.text, _nameInput.text);
                         }
                       },
                       child: Container(
@@ -218,7 +264,7 @@ class _FormDataState extends State<FormData> {
                           ],
                         ),
                         child: Text(
-                          'Submit',
+                          AppLocalizations.of(context)!.submit,
                           style: TextStyle(
                             color: Colors.white, // Chữ trắng
                             fontSize: 16,
@@ -244,5 +290,3 @@ class _FormDataState extends State<FormData> {
     );
   }
 }
-
-

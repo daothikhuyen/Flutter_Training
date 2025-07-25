@@ -1,21 +1,8 @@
-# flutter_demo_Navigation_Router
+# flutter_demo_Internationlization_Localization
   
 #### Example 
 
-- Click on the link on the screem -> open: screem input_form
-
-<img src="./assets/images_readme/pic10.png" width="200"/> <img src="./assets/images_readme/pic2.png" width="200"/>  
-- click submit open screen Navigation_Routing
-  
-  <img src="./assets/images_readme/pic13.png" width="200"/>  
-
-- send data by navigator
-  
-  <img src="./assets/images_readme/pic12.png" width="200"/> 
-
-- go back screen
-
-  <img src="./assets/images_readme/pic11.png" width="200"/>   
+<img src="./assets/images_readme/pic14.png" width="200"/> <img src="./assets/images_readme/pic15.png" width="200"/>   
 
 
 ## TECHNOLOGIES USED
@@ -27,7 +14,7 @@
 ## Installation
 - Move to project branch
 ```bash
-    git checkout feature/navigation_routing
+    git checkout feature/internationlization_localization
 ```
 - Run project
 ```bash
