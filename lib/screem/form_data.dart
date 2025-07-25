@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FormData extends StatefulWidget {
@@ -51,7 +52,7 @@ class _FormDataState extends State<FormData> {
       body: KeyboardListener(
         focusNode: _focusNode,
         onKeyEvent: (value) {
-          final key = value.logicalKey;
+          // final key = value.logicalKey;
           if (value is KeyDownEvent) {
             if (_formKey.currentState!.validate()) {
               _updateText(_emailInput.text, _nameInput.text);
@@ -194,7 +195,8 @@ class _FormDataState extends State<FormData> {
                     child: GestureDetector(
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
-                          _updateText(_emailInput.text, _nameInput.text);
+                         context.go('/ShopMeo');
+                          
                         }
                       },
                       child: Container(
@@ -242,3 +244,5 @@ class _FormDataState extends State<FormData> {
     );
   }
 }
+
+
