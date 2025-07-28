@@ -1,10 +1,10 @@
-# flutter_demo_Widget_Catlog
+# flutter_demo_Animations&Transitions
   
 #### Example 
-- Some examples of animation, router, text, button,...
+- Implicit animations, explicit animations, AnimatedBuilder and AnimatedWidget, Opacity ,...
 
-<img src="./assets/images_readme/pic16.png" width="200"/> <img src="./assets/images_readme/pic17.png" width="200"/>   
-<img src="./assets/images_readme/pic18.png" width="200"/>   
+<img src="./assets/images_readme/pic19.png" width="200"/> <img src="./assets/images_readme/pic20.png" width="200"/>   
+<img src="./assets/images_readme/pic21.png" width="200"/>   
 
 
 ## TECHNOLOGIES USED
@@ -16,7 +16,7 @@
 ## Installation
 - Move to project branch
 ```bash
-    git checkout feature/wideget_catlog
+    git checkout feature/animations_trainsitions
 ```
 - Run project
 ```bash

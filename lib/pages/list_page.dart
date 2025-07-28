@@ -13,6 +13,7 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
   List<int> items = List<int>.generate(10, (int index) => index);
   late AnimationController controller;
   bool determinate = true;
+  double opacity = 0;
 
   @override
   void initState() {
@@ -21,20 +22,9 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
     Timer(const Duration(seconds: 1), () {
       setState(() {
         determinate = false;
+        opacity = 1;
       });
     });
-
-    controller =
-        AnimationController(
-            /// [AnimationController]s can be created with `vsync: this` because of
-            /// [TickerProviderStateMixin].
-            vsync: this,
-            duration: const Duration(seconds: 1),
-          )
-          ..addListener(() {
-            setState(() {});
-          })
-          ..repeat(reverse: true);
   }
 
   @override
@@ -61,15 +51,16 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
         color: Color(0xFFfffcf3),
         child: Column(
           children: [
-            if (determinate)
-              LinearProgressIndicator(
-                value: determinate ? controller.value : null,
-                semanticsLabel: 'Linear progress indicator',
-              ),
+            // if (determinate)
+            //   LinearProgressIndicator(
+            //     value: determinate ? controller.value : null,
+            //     semanticsLabel: 'Linear progress indicator',
+            //   ),
 
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
+              child: AnimatedOpacity(
+                duration: const Duration(seconds: 2),
+                opacity: opacity,
                 child: ListView.builder(
                   itemCount: items.length,
                   padding: const EdgeInsets.symmetric(vertical: 16),
@@ -106,6 +97,4 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
       ),
     );
   }
-
-  Widget buildSheet() => Container();
 }
