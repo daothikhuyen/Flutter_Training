@@ -1,8 +1,10 @@
-# flutter_demo_Internationlization_Localization
+# flutter_demo_Widget_Catlog
   
 #### Example 
+- Some examples of animation, router, text, button,...
 
-<img src="./assets/images_readme/pic14.png" width="200"/> <img src="./assets/images_readme/pic15.png" width="200"/>   
+<img src="./assets/images_readme/pic16.png" width="200"/> <img src="./assets/images_readme/pic17.png" width="200"/>   
+<img src="./assets/images_readme/pic18.png" width="200"/>   
 
 
 ## TECHNOLOGIES USED
@@ -14,7 +16,7 @@
 ## Installation
 - Move to project branch
 ```bash
-    git checkout feature/internationlization_localization
+    git checkout feature/wideget_catlog
 ```
 - Run project
 ```bash
