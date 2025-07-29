@@ -1,6 +1,4 @@
 import 'dart:math';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/pages/fying_saucer_page.dart';
 
@@ -26,14 +24,6 @@ class _RootPageState extends State<RootPage>
       duration: const Duration(seconds: 4),
       vsync: this,
     )..repeat();
-    final Animation<double> curve = CurvedAnimation(
-      parent: _animationController,
-      curve: Curves.easeOut,
-    );
-    Animation<int> alpha = IntTween(
-      begin: 0,
-      end: 255,
-    ).animate(_animationController);
   }
 
   @override
@@ -46,7 +36,15 @@ class _RootPageState extends State<RootPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page Home'),
+        title: RichText(
+          text: TextSpan(
+            text: 'Xin chào',
+            style: TextStyle(
+              fontSize: 18,
+              locale: Locale('vi'), // đây là locale, không phải "local"
+            ),
+          ),
+        ),
         backgroundColor: Color(0xFFf0eddc),
         actions: <Widget>[
           TextButton(
@@ -58,15 +56,12 @@ class _RootPageState extends State<RootPage>
       ),
       body: Column(
         children: [
-          Expanded(
-             child: FyingSaucerPage(),
-          ),
+          Expanded(child: FyingSaucerPage()),
           Expanded(
             child: Row(
               // clipBehavior: Clip.none,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                
                 Align(
                   alignment: Alignment.center,
                   child: RotationTransition(
@@ -88,8 +83,10 @@ class _RootPageState extends State<RootPage>
                   animation: _animationController,
                   builder: (context, child) {
                     double angle =
-                        sin(_animationController.value * 2 * pi) * pi / 10; // Lắc
-            
+                        sin(_animationController.value * 2 * pi) *
+                        pi /
+                        10; // Lắc
+
                     return Transform.rotate(angle: angle, child: child);
                   },
                   child: Icon(Icons.ac_unit_rounded, size: 80),
@@ -99,17 +96,23 @@ class _RootPageState extends State<RootPage>
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            if (_animationController.isAnimating) {
-              _animationController.stop();
-            } else {
-              _animationController.repeat();
-            }
-          });
-        },
-        child: const Icon(Icons.rotate_right_outlined),
+      floatingActionButton: Semantics(
+        label: 'Button stop animation',
+        button: true,
+        enabled: true,
+        readOnly: true,
+        child: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              if (_animationController.isAnimating) {
+                _animationController.stop();
+              } else {
+                _animationController.repeat();
+              }
+            });
+          },
+          child: const Icon(Icons.rotate_right_outlined),
+        ),
       ),
     );
   }

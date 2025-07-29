@@ -1,10 +1,10 @@
 # flutter_demo_Animations&Transitions
   
 #### Example 
-- Implicit animations, explicit animations, AnimatedBuilder and AnimatedWidget, Opacity ,...
+- Support people with disabilities with reading utilities with semantic labels
 
-<img src="./assets/images_readme/pic19.png" width="200"/> <img src="./assets/images_readme/pic20.png" width="200"/>   
-<img src="./assets/images_readme/pic21.png" width="200"/>   
+<img src="./assets/images_readme/pic22.png" width="200"/> <img src="./assets/images_readme/pic20.png" width="200"/>   
+
 
 
 ## TECHNOLOGIES USED
@@ -17,6 +17,11 @@
 - Move to project branch
 ```bash
     git checkout feature/animations_trainsitions
+```
+
+- Move to project branch internationlization
+```bash
+    git checkout feature/internationlization_localization
 ```
 - Run project
 ```bash
