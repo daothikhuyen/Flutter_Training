@@ -1,9 +1,13 @@
 # flutter_demo_Animations&Transitions
   
 #### Example 
-- Support people with disabilities with reading utilities with semantic labels
-
-<img src="./assets/images_readme/pic22.png" width="200"/> <img src="./assets/images_readme/pic20.png" width="200"/>   
+- Debugging : 
+  
+<img src="./assets/images_readme/pic23.png" width="200"/>   <img src="./assets/images_readme/pic24.png" width="200"/>   
+  
+- Widgetbook :
+  
+  <img src="./assets/images_readme/pic25.png" width="500"/>   
 
 
 
@@ -16,13 +20,9 @@
 ## Installation
 - Move to project branch
 ```bash
-    git checkout feature/animations_trainsitions
+    git checkout feature/widegt_book
 ```
 
-- Move to project branch internationlization
-```bash
-    git checkout feature/internationlization_localization
-```
 - Run project
 ```bash
   flutter run

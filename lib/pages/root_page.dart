@@ -117,23 +117,3 @@ class _RootPageState extends State<RootPage>
     );
   }
 }
-
-// implicit animation
-  // Positioned(
-  //   left: (MediaQuery.of(context).size.width/2)-80,
-  //   top: (MediaQuery.of(context).size.height/2)-120,
-  //   child: AnimatedRotation(
-  //     turns: myAngle,
-  //     duration: const Duration(seconds: 2),
-  //     child: CircleAvatar(
-  //       radius: 80,
-  //       backgroundColor: Color(0xffFDCF09),
-  //       child: CircleAvatar(
-  //         radius: 70,
-  //         backgroundImage: NetworkImage(
-  //           'https://s3.o7planning.com/images/boy-128.png',
-  //         ),
-  //       ),
-  //     ),
-  //   ),
-  // ),
