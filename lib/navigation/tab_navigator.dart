@@ -14,7 +14,7 @@ class TabNavigator extends StatelessWidget {
         Widget page;
         switch (settings.name) {
           case '/':
-            page = RootPage(tabIndex: tabIndex);
+            page = RootPage();
             break;
           case '/list':
             Navigator.push(
@@ -26,7 +26,7 @@ class TabNavigator extends StatelessWidget {
             page = const Scaffold(body: Center(child: Text('Not founr')));
         }
 
-        return MaterialPageRoute(builder: (_) => RootPage(tabIndex: tabIndex));
+        return MaterialPageRoute(builder: (_) => RootPage());
       },
     );
   }

@@ -1,0 +1,15 @@
+{
+
+    "@@locale": "en",
+    "title": "Form Input",
+    "enter_email": "Enter email",
+    "enter_name": "Enter name",
+    "gender" : "Gender",
+    "male" : "Male",
+    "female" : "Female",
+    "other": "Other",
+    "checkbox_agree": "I agree to your privacy policy",
+    "submit" : "Submit",
+    "english": "English",
+    "vietnam": "VietNamese"
+}

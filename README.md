@@ -22,7 +22,10 @@
 ```bash
     git checkout feature/widegt_book
 ```
-
+- Built file main.directories.g
+```bash
+    flutter pub run build_runner build
+```
 - Run project
 ```bash
   flutter run
