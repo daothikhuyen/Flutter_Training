@@ -1,13 +1,11 @@
-# flutter_demo_Animations&Transitions
+# flutter_demo_responsive
   
 #### Example 
-- Debugging : 
+- Example of screems responsive for every sizes: 
+- run app at widget-book
   
-<img src="./assets/images_readme/pic23.png" width="200"/>   <img src="./assets/images_readme/pic24.png" width="200"/>   
-  
-- Widgetbook :
-  
-  <img src="./assets/images_readme/pic25.png" width="500"/>   
+<img src="./assets/images_readme/pic27.png" width="300"/>   <img src="./assets/images_readme/pic28.png" width="300"/>   
+<img src="./assets/images_readme/pic26.png" width="500"/>   
 
 
 

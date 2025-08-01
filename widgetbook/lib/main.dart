@@ -14,12 +14,8 @@ void main() {
 
 @widgetbook.App(
   cloudAddonsConfigs: {
-    'Vietnamese': [
-      widgetbook.LocalizationAddonConfig('vi'), 
-    ],
-    'English': [
-      widgetbook.LocalizationAddonConfig('en'), 
-    ],
+    'Vietnamese': [widgetbook.LocalizationAddonConfig('vi')],
+    'English': [widgetbook.LocalizationAddonConfig('en')],
   },
 )
 class WidgetbookApp extends StatelessWidget {
@@ -28,23 +24,33 @@ class WidgetbookApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Widgetbook.material(
-       initialRoute: '?path=pages/detailpage/default',
+      initialRoute: '?path=pages/detailpage/default',
       // The [directories] variable does not exist yet,
       // it will be generated in the next step
       directories: directories,
       addons: [
-        // ViewportAddon([
-        //   IosViewports.iPad
-        // ]),
-        DeviceFrameAddon(devices: [Devices.ios.iPhoneSE, Devices.ios.iPhone13, Devices.android.smallTablet]),
+        DeviceFrameAddon(
+          devices: [
+            Devices.ios.iPhoneSE,
+            Devices.ios.iPhone13,
+            Devices.android.smallTablet,
+            Devices.windows.laptop
+          ],
+        ),
         InspectorAddon(),
         // GridAddon(100),
         AlignmentAddon(),
         ZoomAddon(),
-        LocalizationAddon( 
-          locales: AppLocalizations.supportedLocales, 
-          localizationsDelegates: AppLocalizations.localizationsDelegates, 
-        ), 
+        MaterialThemeAddon(
+          themes: [
+            WidgetbookTheme(name: 'Dark', data: ThemeData.dark()),
+            WidgetbookTheme(name: 'Light', data: ThemeData.light()),
+          ],
+        ),
+        LocalizationAddon(
+          locales: AppLocalizations.supportedLocales,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+        ),
       ],
     );
   }

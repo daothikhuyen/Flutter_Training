@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/material_widgaets.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_practice/pages/feed.dart';
+import 'package:flutter_practice/data/data.dart' as data;
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xFFfffcf3),
         // textTheme: GoogleFonts.grandHotelTextTheme(),
       ),
-      home: const MaterialWidgaets()
+      home: Feed(currentUser: data.user_0)
     );
   }
 }
