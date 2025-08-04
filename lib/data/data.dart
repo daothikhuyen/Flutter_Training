@@ -49,7 +49,7 @@ final List<Email> emails = [
     subject: 'This food show is made for you',
     content:
         "Ping– you'd love this new food show I started watching. It's produced by a Thai drummer who started getting recognized for the amazing vegan food she always brought to shows.",
-    attachments: [const Attachment(url: 'assets/thumbnail_1.png')],
+    attachments: [const Attachment(url: 'assets/images/avatar/thumbnail_1.png')],
   ),
   Email(
     sender: user_4,

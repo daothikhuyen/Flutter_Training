@@ -24,7 +24,7 @@ class WidgetbookApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Widgetbook.material(
-      initialRoute: '?path=pages/detailpage/default',
+      initialRoute: '?path=flow/weidget/bookmark_view/bookmarkitem/default',
       // The [directories] variable does not exist yet,
       // it will be generated in the next step
       directories: directories,
@@ -34,7 +34,9 @@ class WidgetbookApp extends StatelessWidget {
             Devices.ios.iPhoneSE,
             Devices.ios.iPhone13,
             Devices.android.smallTablet,
-            Devices.windows.laptop
+            Devices.windows.laptop,
+            Devices.android.samsungGalaxyA50,
+            Devices.ios.iPad12InchesGen2
           ],
         ),
         InspectorAddon(),
@@ -43,8 +45,8 @@ class WidgetbookApp extends StatelessWidget {
         ZoomAddon(),
         MaterialThemeAddon(
           themes: [
-            WidgetbookTheme(name: 'Dark', data: ThemeData.dark()),
             WidgetbookTheme(name: 'Light', data: ThemeData.light()),
+            WidgetbookTheme(name: 'Dark', data: ThemeData.dark()),
           ],
         ),
         LocalizationAddon(

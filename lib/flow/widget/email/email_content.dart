@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/flow/widget/email/email_reply_options.dart';
 import 'package:flutter_practice/models/email.dart';
-import 'package:flutter_practice/widget/email/email_reply_options.dart';
 import 'package:flutter_practice/widget/start_button.dart';
 
 class EmailContent extends StatefulWidget {

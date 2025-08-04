@@ -1,11 +1,19 @@
 # flutter_demo_responsive
   
 #### Example 
-- Example of screems responsive for every sizes: 
-- run app at widget-book
+- Example of responsive layout, automatic platform ZoomPageTransitionsBuilder  in Android
   
-<img src="./assets/images_readme/pic27.png" width="300"/>   <img src="./assets/images_readme/pic28.png" width="300"/>   
-<img src="./assets/images_readme/pic26.png" width="500"/>   
+<img src="./assets/images_readme/pic31.png" width="300"/>   <img src="./assets/images_readme/pic32.png" width="210"/>   
+<img src="./assets/images_readme/pic33.png" width="200"/> <img src="./assets/images_readme/pic34.png" width="200"/>   
+
+- Run app with device preview:
+
+<img src="./assets/images_readme/pic29.png" width="500"/>   
+
+
+- Example of Aspect ratio: 
+  
+<img src="./assets/images_readme/pic30.png" width="200"/>   
 
 
 
@@ -18,9 +26,9 @@
 ## Installation
 - Move to project branch
 ```bash
-    git checkout feature/widegt_book
+    git checkout feature/responsive_layout
 ```
-- Built file main.directories.g
+- Built file main.directories.g of widgetbook
 ```bash
     flutter pub run build_runner build
 ```

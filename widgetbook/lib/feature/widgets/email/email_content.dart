@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/data/data.dart' as data;
+import 'package:flutter_practice/flow/widget/email/email_content.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
-import 'package:flutter_practice/widget/email/email_content.dart';
 
 @widgetbook.UseCase(name: 'Default', type: EmailContent)
 Widget buildEmailContentUseCase(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/flow/widget/email/email_content.dart';
+import 'package:flutter_practice/flow/widget/email/email_headline.dart';
 import 'package:flutter_practice/models/email.dart';
-import 'package:flutter_practice/widget/email/email_content.dart';
-import 'package:flutter_practice/widget/email/email_headline.dart';
 
 enum EmailType { preview, threaded, primaryThreaded }
 
