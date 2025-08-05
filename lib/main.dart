@@ -1,26 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/screem/layout.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_practice/state_management.dart';
+import 'package:flutter_practice/switch_lifecycle.dart';
+import 'package:provider/provider.dart';
+
+/// This is a reimplementation of the default Flutter application using provider + [ChangeNotifier].
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        // provider data for all app
+        ChangeNotifierProvider(create: (_) => Counter()),
+      ],
+      child: const MyApp(),
+    ),
+  );
+  // runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter layout demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        textTheme: GoogleFonts.grandHotelTextTheme(),
-      ),
-      home: const Layouts()
-    );
+    return const MaterialApp(home: StateManagement());
   }
 }
 
