@@ -1,26 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/screem/layout.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_practice/album.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late Future<Album> futureAlbum;
+
+  @override
+  void initState() {
+    super.initState();
+    // futureAlbum = fetchAlbum();
+    futureAlbum =  request();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter layout demo',
-      debugShowCheckedModeBanner: false,
+      title: 'Fetch Data Example',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        textTheme: GoogleFonts.grandHotelTextTheme(),
       ),
-      home: const Layouts()
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Fetch Data Example')),
+        body: Center(
+          child: FutureBuilder<Album>(
+            future: futureAlbum,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                // print(snapshot.data);
+                return Text(snapshot.data!.title);
+              } else if (snapshot.hasError) {
+                return Text('${snapshot.error}');
+              }
+
+              // By default, show a loading spinner.
+              return const CircularProgressIndicator();
+            },
+          ),
+        ),
+      ),
     );
   }
-}
 
+  // ···
+}

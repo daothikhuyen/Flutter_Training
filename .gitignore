@@ -14,7 +14,6 @@
 .pub/
 build/
 coverage/
-lib/generated_plugin_registrant.dart
 lib/screem/layout.dart
 assets/
 # For library packages, don’t commit the pubspec.lock file.
