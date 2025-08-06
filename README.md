@@ -2,7 +2,8 @@
 
 ### Complete
 
-<img src="./assets/images_readme/image.png" width="200"/>
+![Uploading Ảnh chụp màn hình 2025-08-06 133846.png…]()
+
 
 ## Technologies Used
 
@@ -24,4 +25,5 @@
 - Run project
 ```bash
   flutter run
+
 ```
